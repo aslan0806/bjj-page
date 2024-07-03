@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бразильское джиу-джитсу</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: square;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .image {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .image-caption {
+            font-style: italic;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .theme-switcher {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .theme-switcher button {
+            margin: 5px;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .theme-switcher button:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Default Theme */
+        .default-theme {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+        .default-theme .container {
+            background-color: #2c2c2c;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        .default-theme h1, .default-theme h2, .default-theme h3 {
+            color: #d32f2f;
+        }
+        .default-theme a {
+            color: #1976d2;
+        }
+        .default-theme .image-caption {
+            color: #b0b0b0;
+        }
+        .default-theme .theme-switcher button {
+            background-color: #d32f2f;
+        }
+        .default-theme .theme-switcher button:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Girly Theme */
+        .girly-theme {
+            background-color: #f8bbd0;
+            color: #4a148c;
+        }
+        .girly-theme .container {
+            background-color: #fce4ec;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .girly-theme h1, .girly-theme h2, .girly-theme h3 {
+            color: #880e4f;
+        }
+        .girly-theme a {
+            color: #d81b60;
+        }
+        .girly-theme .image-caption {
+            color: #880e4f;
+        }
+        .girly-theme .theme-switcher button {
+            background-color: #d81b60;
+        }
+        .girly-theme .theme-switcher button:hover {
+            background-color: #ad1457;
+        }
+
+        /* Tab styles */
+        .tab {
+            display: none;
+        }
+        .tab.active {
+            display: block;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .tabs button {
+            background-color: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: border-bottom 0.3s, color 0.3s;
+        }
+        .tabs button:hover {
+            color: #007BFF;
+        }
+        .tabs button.active {
+            border-bottom: 3px solid #007BFF;
+            color: #007BFF;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .theme-switcher button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            .tabs button {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body class="default-theme">
+    <div class="container">
+        <h1>Бразильское джиу-джитсу</h1>
+
+        <div class="tabs">
+            <button onclick="openTab(event, 'history')" class="active">История</button>
+            <button onclick="openTab(event, 'techniques')">Техники</button>
+            <button onclick="openTab(event, 'benefits')">Преимущества</button>
+        </div>
+
+        <div id="history" class="tab active">
+            <h2>История бразильского джиу-джитсу</h2>
+            <p>История бразильского джиу-джитсу началась с приезда японского иммигранта Мицуё Маэды в Бразилию в начале 20 века. Маэда, известный своими знаниями в дзюдо и джиу-джитсу, обучал своему искусству местных жителей, включая членов семьи Грейси. Особенно важную роль в развитии джиу-джитсу сыграл Карлос Грейси, который адаптировал и трансформировал техники для работы в условиях, где физическая сила не всегда является преимуществом.</p>
+            <img src="https://s15.stc.yc.kpcdn.net/share/i/12/10977977/wr-960.webp" alt="Бразильское джиу-джитсу" class="image">
+            <p class="image-caption">Бразильское джиу-джитсу — техническое боевое искусство, акцентирующееся на граундфайтинге и техниках ближнего боя.</p>
+            <p>Семья Грейси начала преподавать искусство джиу-джитсу в Бразилии, и с тех пор оно стало неотъемлемой частью бразильской культуры и спортивной сцены. В ходе развития бразильского джиу-джитсу были созданы и усовершенствованы техники, позволяющие бойцам с меньшим физическим потенциалом эффективно сопротивляться более сильным противникам. Спорт стал популярен не только в Бразилии, но и во всем мире благодаря своей эффективности и уникальной методике обучения.</p>
+        </div>
+
+        <div id="techniques" class="tab">
+            <h2>Основные принципы и техники</h2>
+            <p>Основными принципами БДД являются эффективность и техническое мастерство. Главная идея состоит в том, чтобы использовать технику и правильное положение тела, чтобы контролировать соперника и нейтрализовать его атаки.</p>
+            <p>Основные техники включают в себя разнообразные захваты, удержания, броски и болевые приемы:</p>
+            <ul>
+                <li><strong>Захваты и удержания:</strong> гвардия (guard), маунт (mount), контроль бока (side control)</li>
+                <li><strong>Броски и сваливания:</strong> двойной захват ног (double leg takedown), бросок через бедро (hip throw)</li>
+                <li><strong>Болевые приемы:</strong> рычаг на руку (armbar), рычаг на плечо (kimura), удушающий прием "треугольник" (triangle choke)</li>
+            </ul>
+            <img src="https://avatars.mds.yandex.net/get-altay/1332064/2a000001604x453&quality=96&sign=608d0cfb4c2e56a24ab99669f1dfcd5e&type=album" alt="Основные техники" class="image">
+            <p class="image-caption">Болевой прием в бразильском джиу-джитсу.</p>
+        </div>
+
+        <div id="benefits" class="tab">
+            <h2>Преимущества занятий БДД</h2>
+            <p>Бразильское джиу-джитсу обладает множеством преимуществ, как для физического, так и для ментального здоровья:</p>
+            <ul>
+                <li><strong>Физическое развитие:</strong> улучшение общей физической формы, повышение гибкости и выносливости.</li>
+                <li><strong>Боевые навыки:</strong> освоение эффективных техник защиты и контроля соперника.</li>
+                <li><strong>Психологические преимущества:</strong> развитие самодисциплины, уверенности в себе и стратегического мышления.</li>
+                <li><strong>Социальные аспекты:</strong> возможность встретить новых друзей, участвовать в соревнованиях и стать частью международного сообщества бойцов.</li>
+            </ul>
+            <img src="https://www.film.ru/sites/default/files/filefield_paths/hardyjiu.jpg" alt="Соревнования по бразильскому джиу-джитсу" class="image">
+            <p class="image-caption">Соревнование по бразильскому джиу-джитсу.</p>
+        </div>
+
+        <h2>Полезные ссылки</h2>
+        <ul>
+            <li><a href="https://www.ibjjf.com" target="_blank">Официальный сайт International Brazilian Jiu-Jitsu Federation (IBJJF)</a></li>
+            <li><a href="https://www.youtube.com/results?search_query=brazilian+jiu+jitsu+tutorials" target="_blank">Видео-уроки на YouTube</a></li>
+            <li><a href="https://ru.wikipedia.org/wiki/%D0%91%D1%80%D0%B0%D0%B7%D0%B8%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B5_%D0%B4%D0%B6%D0%B8%D1%83-%D0%B4%D0%B6%D0%B8%D1%82%D1%81%D1%83" target="_blank">Статья в Википедии о БДД</a></li>
+        </ul>
+
+        <div class="theme-switcher">
+            <button onclick="setTheme('default')">Default Theme</button>
+            <button onclick="setTheme('girly')">Girly Theme</button>
+        </div>
+    </div>
+
+    <script>
+        function setTheme(theme) {
+            document.body.className = theme + '-theme';
+        }
+
+        function openTab(event, tabId) {
+            var i, tabs, tabButtons;
+            tabs = document.getElementsByClassName('tab');
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            tabButtons = document.getElementsByClassName('tabs')[0].getElementsByTagName('button');
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove('active');
+            }
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
+
